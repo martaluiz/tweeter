@@ -1,0 +1,29 @@
+/*
+* Additional CSS to style the title
+*/
+
+/*
+* Additional CSS to style the form
+*/
+
+#tweet-area {
+  width: 100%;
+  background-color: inherit;
+  overflow: hidden;
+  border: none;
+  border-bottom: 4px #545149 solid;
+}
+
+.counter {
+  float: right;
+  font-size: 0.9em;
+  line-height: 3;
+  font-family: Bungee;
+
+}
+
+.buttom {
+  font-size: 24px;
+  font-family: Bungee;
+  
+}
