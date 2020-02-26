@@ -1,4 +1,9 @@
-
+.tweet {
+  border: 4px black solid;
+  opacity: 0.55;
+  margin-top: 3%;
+  padding: 3%;
+}
 
 #tweets-nameOfUser{
   vertical-align: middle;
@@ -42,7 +47,7 @@ align-items: center;
 height: 60px;
 }
 
-.tweet p {
+.tweet-text {
   margin: 20px auto;
   padding-bottom: 20px;
   border-bottom: 4px #545149 solid;
