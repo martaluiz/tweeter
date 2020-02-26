@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // --- our code goes here ---
-  $("#tweet-area").on("keyup", "textarea", function (event) {
+  $("#tweet-area").on("keyup", function (event) {
     //get the value of 'this', that mean, the text that user enter in a textarea
     //get the length of the text
     //subtract this value from 140.

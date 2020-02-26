@@ -13,14 +13,21 @@
 
 .counter {
   float: right;
-  font-size: 0.9em;
-  line-height: 3;
-  font-family: Bungee;
-
+  font-family: 'Bungee', cursive;
 }
 
-.buttom {
+.btn {
+  font-family: 'Bungee';
+  color: black;
   font-size: 24px;
-  font-family: Bungee;
-  
+  padding: 5px 10px;
+}
+.error {
+  color: red;
+  font-size: 19px;
+  margin-left: 10px;
+}
+
+.fontRed {
+  color: red;
 }
