@@ -9,6 +9,7 @@
   overflow: hidden;
   border: none;
   border-bottom: 4px #545149 solid;
+  margin-top: 125px;
 }
 
 #tweet-area:focus{

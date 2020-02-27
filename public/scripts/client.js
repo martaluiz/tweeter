@@ -95,7 +95,6 @@ $(document).ready(function () {
         url: '/tweets',
         data: serializedFormInfo,
         success: function (tweet) {
-          //$('.tweets-container').empty();
           $('textarea').val('');
           $('.counter').html('140');
           $('.tweets-container').prepend(createTweetElement(tweet));
