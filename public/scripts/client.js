@@ -5,7 +5,11 @@
  */
 
 // Fake data taken from initial-tweets.json
-
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 const renderTweets = function (tweets) {
   // loops through tweets
@@ -13,7 +17,7 @@ const renderTweets = function (tweets) {
   // takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     $(document).ready(function () {
-      $('.tweets-container').append(createTweetElement(tweet));
+      $('.tweets-container').prepend(createTweetElement(tweet));
     });
 
   }
@@ -49,23 +53,25 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
-//function to fetch tweets
-function loadTweets() {
-  $.ajax({
-    type: 'GET',
-    url: '/tweets',
-    success: function (tweet) {
-      renderTweets(tweet);
-    }
-  });
-}
-loadTweets();
-
 $(document).ready(function () {
+
+  function loadTweets() {
+    $.ajax({
+      type: 'GET',
+      url: '/tweets',
+      success: function (tweet) {
+        renderTweets(tweet);
+      }
+    });
+  }
+  loadTweets();
+
   $('#tweet-form').submit(function (event) {
     // Stop the browser from submitting the form.
     event.preventDefault();
-    // input validation, using notify.js for bad input
+
+    // Validation, if empty or > 140 characters give error (Via alert)
+    // Else, load tweets to the page using AJAX
     let length = $(this).find('#tweet-area').val().length;
     if (length === 0) {
       alert("OOps! Your tweet is empty! Must enter something. Get creative!");
@@ -86,9 +92,15 @@ $(document).ready(function () {
           $('.counter').html('140');
           loadTweets();
         }
-
       });
     }
+
   });
-})
-renderTweets(data);
+
+  $(".composeButton").click(() => {
+    $(".new-tweet").slideToggle("slow");
+    $(".new-tweet textarea").focus();
+  });
+  //The new tweet area is hidden until called upon
+  $(".new-tweet").hide();
+});

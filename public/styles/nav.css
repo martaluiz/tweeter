@@ -12,3 +12,21 @@
   justify-content: space-between;
 }
 
+.composeButton  {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.composeButton:hover {
+  color: #000000;
+  cursor: pointer;
+}
+.txt {
+  font-family: sans-serif;
+}
+.scr {
+  display: flex;
+  align-items: center;
+}
