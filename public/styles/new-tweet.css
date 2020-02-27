@@ -11,6 +11,12 @@
   border-bottom: 4px #545149 solid;
 }
 
+#tweet-area:focus{
+  outline: none;
+    border:1px solid #fdfdfd;
+    box-shadow: 0 0 10px#fdfdfd;
+}
+
 .counter {
   float: right;
   font-family: 'Bungee', cursive;
@@ -30,4 +36,12 @@
 
 .fontRed {
   color: red;
+}
+
+.error-box {
+  color: red;
+  border:  2px solid red;
+  text-align: center;
+  display: none;
+  transition: 0.5;
 }
