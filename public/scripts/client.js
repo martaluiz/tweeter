@@ -36,11 +36,11 @@ $(document).ready(function () {
             <h3>${tweet.user.handle}</h3>
           </div>
         </header>
-        <p>
+        <p class ="tweet-text">
         ${tweet.content.text}
         </p>
         <footer>
-          <div>
+          <div> 
             <h6>${moment(tweet['created_at']).fromNow()}</h6>
           </div>
           <div>
@@ -70,6 +70,7 @@ $(document).ready(function () {
   loadTweets();
 
   $('#tweet-form').submit(function (event) {
+    // stop browser to submit the form
     event.preventDefault();
 
     // Validation, if empty or > 140 characters give error
@@ -83,7 +84,7 @@ $(document).ready(function () {
     }
     else if (length > 140) {
       $(".error-box").show();
-      $("#error-box-message").text("OOps, your tweet is too long! Limit of 140.")
+      $("#error-box-message").text("Oooops, your tweet is too long! Limit of 140.")
         .slideDown(200);
       return;
     } else {

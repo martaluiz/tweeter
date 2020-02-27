@@ -1,8 +1,10 @@
 .tweet {
   border: 4px black solid;
   opacity: 0.55;
-  margin-top: 3%;
+  margin-top: 5%;
   padding: 3%;
+  margin-bottom: 5%;
+  
 }
 
 #tweets-nameOfUser{
@@ -13,11 +15,6 @@
 #avatar{
   vertical-align: middle;
   margin: 20px;
-}
-
-.tweet {
-  border: 4px black solid;
-  opacity: 0.55;
 }
 
 .tweet > header {
