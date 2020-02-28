@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of Login page"]()
-!["Screenshot of Register page"]()
+!["Screenshot of Login page"](https://github.com/martaluiz/tweeter/blob/master/docs/urls-page1.png?raw=true)
+!["Screenshot of Register page"](https://github.com/martaluiz/tweeter/blob/master/docs/urls-page2.png?raw=true)
 
 
 ## Getting Started
